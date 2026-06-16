@@ -1,9 +1,10 @@
-Write. Preview. Build.
+# PRISM IDE
 
-A modern coding experience in your browser.
+🚧 Currently under development — working on it.
 
-The elegant online code editor for developers.
+A modern web-based code editor inspired by VS Code, built with Next.js and React.
 
-Code beautifully.
+## Status
+This project is actively being developed. New features and improvements are being added regularly.
 
-Fast, minimal, and built for developers.
+Stay tuned for updates!
