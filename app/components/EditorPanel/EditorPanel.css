@@ -1,0 +1,179 @@
+/* EditorPanel.css */
+
+.editor-panel {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: #0f172a;
+  border: 1px solid #1e293b;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabs */
+.tabs {
+  height: 58px;
+  background: #111827;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+.tab.active {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.file-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.file-icon.html {
+  color: #e34c26;
+}
+
+.file-icon.css {
+  color: #264de4;
+}
+
+.file-icon.js {
+  color: #f7df1e;
+}
+
+.tab-more {
+  margin-left: auto;
+  font-size: 20px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.tab-more:hover {
+  color: #ffffff;
+}
+
+/* Editor Container */
+.code-box {
+  flex: 1;
+  overflow: hidden;
+  background: #0b1120;
+}
+
+/* Textarea */
+.code-textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  color: #e2e8f0;
+  padding: 24px;
+  font-family: "Fira Code", "Consolas", monospace;
+  font-size: 14px;
+  line-height: 1.8;
+  tab-size: 2;
+  caret-color: #8b5cf6;
+}
+
+.code-textarea::placeholder {
+  color: #64748b;
+}
+
+.code-textarea::selection {
+  background: rgba(139, 92, 246, 0.3);
+}
+
+/* Scrollbar */
+.code-textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+.code-textarea::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.code-textarea::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 10px;
+}
+
+.code-textarea::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .editor-panel {
+    height: 60vh;
+    border-radius: 14px;
+  }
+
+  .tabs {
+    padding: 0 12px;
+    gap: 6px;
+    overflow-x: auto;
+  }
+
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tab {
+    flex-shrink: 0;
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .code-textarea {
+    padding: 18px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .editor-panel {
+    height: 55vh;
+  }
+
+  .tab {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .code-textarea {
+    padding: 16px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+}

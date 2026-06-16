@@ -1,0 +1,52 @@
+.footer-panel {
+  height: 35px;
+  width: 100%;
+  background: #18181b;
+  border-top: 1px solid #27272a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 12px;
+  color: #a1a1aa;
+  flex-shrink: 0;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.port {
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.footer-panel span {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .footer-panel {
+    height: 32px;
+    padding: 0 12px;
+    font-size: 11px;
+  }
+
+  .footer-left {
+    gap: 10px;
+  }
+
+  .footer-right {
+    gap: 10px;
+  }
+
+  /* Hide less important items on mobile */
+  .footer-left span:nth-child(3),
+  .footer-left span:nth-child(4),
+  .footer-right span:nth-child(2) {
+    display: none;
+  }
+}

@@ -1,0 +1,144 @@
+.sidebar {
+  width: 265px;
+  background: #080d22;
+  border-right: 1px solid #202445;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.side-head p,
+.side-title {
+  margin: 0;
+}
+
+.side-title {
+  margin-top: 28px;
+  margin-bottom: 12px;
+  color: #7d86a8;
+  font-size: 13px;
+}
+
+.side-item {
+  height: 44px;
+  border-radius: 9px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d1d5db;
+  font-size: 15px;
+  position: relative;
+}
+
+.side-item.active,
+.side-item:hover {
+  background: #191e3f;
+  color: white;
+}
+
+.file-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  font-size: 11px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+}
+
+.html {
+  background: #ff5d1f;
+}
+
+.css {
+  background: #3b82f6;
+}
+
+.js {
+  background: #facc15;
+  color: #111827;
+}
+
+.active-dot {
+  margin-left: auto;
+  font-size: 14px;
+  color: #a5a6ff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pro-card {
+  background: linear-gradient(135deg, #1d2150, #332168);
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.pro-card h4 {
+  margin: 0 0 12px;
+  color: #b794ff;
+}
+
+.pro-card p {
+  color: #b8bfdc;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.pro-card button {
+  width: 100%;
+  height: 38px;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #a855f7);
+}
+
+.socials {
+  margin-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  color: #8b95b2;
+}
+
+@media (max-width: 1000px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .pro-card,
+  .socials {
+    display: none;
+  }
+}
+
+.files-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px; /* Space between items */
+  height: 40vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.files-container > * {
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}

@@ -1,0 +1,102 @@
+.header {
+  height: 78px;
+  background: rgba(7, 10, 24, 0.95);
+  border-bottom: 1px solid #202445;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+}
+
+.header-left,
+.header-center,
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  gap: 14px;
+}
+
+.logo-icon {
+  font-size: 30px;
+  color: #8b5cf6;
+}
+
+.header-left h1 {
+  font-size: 23px;
+  margin: 0;
+}
+
+.header-left span {
+  color: #8b5cf6;
+}
+
+.header-center {
+  gap: 30px;
+}
+
+.project-btn,
+.theme-btn,
+.share-btn,
+.download-btn {
+  height: 42px;
+  border: 1px solid #252a4a;
+  background: #111633;
+  color: white;
+  border-radius: 10px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.saved-status {
+  color: #a6adc8;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.saved-status span {
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.header-right {
+  gap: 14px;
+}
+
+.theme-btn {
+  padding: 0 14px;
+  color: #a78bfa;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+}
+
+.avatar img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+@media (max-width: 800px) {
+  .header {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 14px;
+    padding: 18px;
+  }
+
+  .header-center {
+    display: none;
+  }
+}
