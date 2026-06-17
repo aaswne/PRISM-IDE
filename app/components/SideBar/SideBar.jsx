@@ -12,7 +12,15 @@ import {
   FiCommand,
 } from "react-icons/fi";
 
-export default function SideBar({ handleClick, page, handleDelete }) {
+export default function SideBar({
+  handleClick,
+  page,
+  handleDelete,
+  showInput,
+  newFile,
+  setNewFile,
+  handleAddFile
+}) {
   const [active, setActive] = useState(false);
 
   const handleActive = (id) => {
@@ -30,13 +38,25 @@ export default function SideBar({ handleClick, page, handleDelete }) {
         <p className="side-title">FILES</p>
 
         <div className="div">
+          {showInput && (
+            <input
+              value={newFile}
+              onChange={(e) => setNewFile(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleAddFile();
+                }
+              }}
+              placeholder="index.html"
+              className="file-input "
+              type="text"
+            />
+          )}
           {page.map((item) => (
             <div
               onClick={() => handleActive(item.id)}
               key={item.id}
-            className={`side-item ${
-                active === item.id ? "active" : ""
-              }`}
+              className={`side-item ${active === item.id ? "active" : ""}`}
             >
               <span className="file-icon html">▣</span>
               {item.name}

@@ -39,7 +39,7 @@ export default function EditorPanel({page}) {
       <div className="tabs">
         {page.map((item)=>(<button key={item.id} className="tab active">
           <span className="file-icon html">▣</span>
-          item.name
+         { item.name}
         </button>))}
 
 

@@ -9,18 +9,26 @@ import Footer from "@/app/components/Footer/Footer";
 
 export default function Home() {
   const [page, setPage] = useState<any[]>([]);
+  const [showInput, setShowInput] = useState(false);
+  const [newFile, setNewFile] = useState("");
 
   const handleClick = () => {
-    const newfile = {
-      id: Date.now(),
-      name: `newfile ${page.length + 1}`,
-    };
-
-    setPage([...page, newfile]);
+    setShowInput(true);
   };
 
   const handleDelete = (itemsToDelete: number) => {
     setPage(page.filter((item) => item.id !== itemsToDelete));
+  };
+
+  const handleAddFile = () => {
+    const newfile = {
+      id: Date.now(),
+      name: newFile,
+    };
+
+    setPage([...page, newfile]);
+    setNewFile("");
+    setShowInput(false);
   };
   return (
     <main className="app-shell">
@@ -31,11 +39,15 @@ export default function Home() {
           handleClick={handleClick}
           page={page}
           handleDelete={handleDelete}
+        setNewFile={setNewFile}
+          newFile={newFile}
+          showInput={showInput}
+          handleAddFile={handleAddFile}
         />
 
         <div className="workspace">
           <div className="top-workspace">
-            <EditorPanel page={page}/>
+            <EditorPanel page={page} />
             <PreviewPanel />
           </div>
 

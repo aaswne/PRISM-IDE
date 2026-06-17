@@ -142,3 +142,14 @@
   flex-direction: column;
   gap: 3px;
 }
+
+.file-input {
+  width: 100%;
+  background: #1a1d2e;
+  border: 1px solid #333;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  outline: none;
+  margin-bottom: 8px;
+}
