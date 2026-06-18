@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import Header from "@/app/components/Header/Header";
 import SideBar from "@/app/components/SideBar/SideBar";
@@ -8,15 +8,23 @@ import PreviewPanel from "@/app/components/PreviewPanel/PreviewPanel";
 import Footer from "@/app/components/Footer/Footer";
 
 export default function Home() {
-  const [page, setPage] = useState<any[]>([]);
+  const [page, setPage] = useState([])
   const [showInput, setShowInput] = useState(false);
   const [newFile, setNewFile] = useState("");
+
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    if (showInput) {
+      inputRef.current?.focus();
+    }
+  }, [showInput]);
 
   const handleClick = () => {
     setShowInput(true);
   };
 
-  const handleDelete = (itemsToDelete: number) => {
+  const handleDelete = (itemsToDelete) => {
     setPage(page.filter((item) => item.id !== itemsToDelete));
   };
 
@@ -39,10 +47,11 @@ export default function Home() {
           handleClick={handleClick}
           page={page}
           handleDelete={handleDelete}
-        setNewFile={setNewFile}
+          setNewFile={setNewFile}
           newFile={newFile}
           showInput={showInput}
           handleAddFile={handleAddFile}
+          inputRef={inputRef}
         />
 
         <div className="workspace">

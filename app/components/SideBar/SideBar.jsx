@@ -1,5 +1,5 @@
 import "./SideBar.css";
-import { useState } from "react";
+import { useState  } from "react";
 import { FiX } from "react-icons/fi";
 import {
   FiPlus,
@@ -19,9 +19,11 @@ export default function SideBar({
   showInput,
   newFile,
   setNewFile,
-  handleAddFile
+  handleAddFile,
+  inputRef
 }) {
   const [active, setActive] = useState(false);
+
 
   const handleActive = (id) => {
     setActive(id);
@@ -40,6 +42,7 @@ export default function SideBar({
         <div className="div">
           {showInput && (
             <input
+               ref={inputRef}
               value={newFile}
               onChange={(e) => setNewFile(e.target.value)}
               onKeyDown={(e) => {
