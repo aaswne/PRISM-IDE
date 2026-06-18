@@ -11,28 +11,7 @@ const MonacoEditor = dynamic(
 );
 
 export default function EditorPanel({page}) {
-  const [code, setCode] = useState(`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prism</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="container">
-    <h1 class="title">Hello, World! 👋</h1>
-    <p class="subtitle">
-      Edit code and see the result in real time.
-    </p>
-    <button id="btn" class="btn">
-      Click Me
-    </button>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>`);
+  const [code, setCode] = useState();
 
   return (
     <section className="editor-panel">

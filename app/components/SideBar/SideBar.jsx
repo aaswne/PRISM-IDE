@@ -20,7 +20,9 @@ export default function SideBar({
   newFile,
   setNewFile,
   handleAddFile,
-  inputRef
+  inputRef,
+  handlePreview,
+  showPreview
 }) {
   const [active, setActive] = useState(false);
 
@@ -32,9 +34,9 @@ export default function SideBar({
   return (
     <aside className="sidebar">
       <div>
-        <div className="side-head">
+        <div className="side-head" >
           <p>EXPLORER</p>
-          <FiPlus onClick={handleClick} />
+          <FiPlus />
         </div>
 
         <p className="side-title">FILES</p>
@@ -73,7 +75,7 @@ export default function SideBar({
 
         <p className="side-title">TOOLS</p>
 
-        <div className="side-item active">
+        <div onClick={handlePreview} className={showPreview?"side-item active":"side-item"}>
           <FiPlay />
           Live Preview
         </div>

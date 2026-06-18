@@ -8,9 +8,10 @@ import PreviewPanel from "@/app/components/PreviewPanel/PreviewPanel";
 import Footer from "@/app/components/Footer/Footer";
 
 export default function Home() {
-  const [page, setPage] = useState([])
+  const [page, setPage] = useState([]);
   const [showInput, setShowInput] = useState(false);
   const [newFile, setNewFile] = useState("");
+  const [showPreview, setShowPreview] = useState(false);
 
   const inputRef = useRef(null);
 
@@ -38,6 +39,10 @@ export default function Home() {
     setNewFile("");
     setShowInput(false);
   };
+
+  const handlePreview = () => {
+    setShowPreview(!showPreview);
+  };
   return (
     <main className="app-shell">
       <Header />
@@ -52,12 +57,14 @@ export default function Home() {
           showInput={showInput}
           handleAddFile={handleAddFile}
           inputRef={inputRef}
+          handlePreview={handlePreview}
+          showPreview={showPreview}
         />
 
         <div className="workspace">
           <div className="top-workspace">
             <EditorPanel page={page} />
-            <PreviewPanel />
+            {showPreview&&<PreviewPanel />}
           </div>
 
           <Footer />
