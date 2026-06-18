@@ -36,7 +36,7 @@ export default function SideBar({
       <div>
         <div className="side-head" >
           <p>EXPLORER</p>
-          <FiPlus />
+          <FiPlus onClick={handleClick}/>
         </div>
 
         <p className="side-title">FILES</p>

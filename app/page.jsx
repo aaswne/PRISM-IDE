@@ -63,7 +63,7 @@ export default function Home() {
 
         <div className="workspace">
           <div className="top-workspace">
-            <EditorPanel page={page} />
+            <EditorPanel page={page} showPreview={showPreview} />
             {showPreview&&<PreviewPanel />}
           </div>
 

@@ -1,14 +1,20 @@
-/* EditorPanel.css */
-
-.editor-panel {
-  width: 100%;
+.editor-panel,
+.editor-panel-large {
   height: calc(100vh - 80px);
   background: #0f172a;
   border: 1px solid #1e293b;
-
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+.editor-panel {
+  flex: 1;
+}
+
+.editor-panel-large {
+  flex: 1;
+  width: 208%;
 }
 
 /* Tabs */

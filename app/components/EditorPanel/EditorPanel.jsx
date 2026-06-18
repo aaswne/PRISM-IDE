@@ -10,11 +10,11 @@ const MonacoEditor = dynamic(
   { ssr: false }
 );
 
-export default function EditorPanel({page}) {
+export default function EditorPanel({page,showPreview}) {
   const [code, setCode] = useState();
 
   return (
-    <section className="editor-panel">
+    <section className={showPreview?"editor-panel":"editor-panel-large"}>
       <div className="tabs">
         {page.map((item)=>(<button key={item.id} className="tab active">
           <span className="file-icon html">▣</span>
