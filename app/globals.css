@@ -59,3 +59,18 @@ button {
     grid-template-columns: 1fr;
   }
 }
+.tab {
+  background: transparent;
+  border: none;
+  color: #8b8fa3;
+  padding: 12px 18px;
+  cursor: pointer;
+  border-top: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.tab.active {
+  color: white;
+  background: #1b1f34;
+  border-top: 2px solid #8b5cf6;
+}
