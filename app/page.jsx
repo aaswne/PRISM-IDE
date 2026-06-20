@@ -92,7 +92,7 @@ export default function Home() {
               setPage={setPage}
               showPreview={showPreview}
             />
-            {showPreview && <PreviewPanel />}
+            {showPreview && <PreviewPanel page={page}/>} 
           </div>
 
           <Footer />
