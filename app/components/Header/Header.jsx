@@ -34,7 +34,7 @@ export default function Header() {
         </button>
 
         <div className="avatar">
-          <img src="https://i.pravatar.cc/100" alt="profile" />
+         
         </div>
       </div>
     </header>

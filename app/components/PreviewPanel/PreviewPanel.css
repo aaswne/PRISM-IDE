@@ -12,6 +12,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 22px;
+  flex-shrink: 0;
 }
 
 .preview-title {
@@ -43,6 +44,11 @@
   display: grid;
   place-items: center;
   cursor: pointer;
+  transition: 0.2s;
+}
+
+.preview-actions button:hover {
+  background: #1f2447;
 }
 
 .preview-actions button.active {
@@ -52,23 +58,73 @@
 
 .preview-body {
   flex: 1;
-  padding: 16px;
-  overflow: hidden;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 80vh;
 }
 
-.preview-frame {
+/* DESKTOP - FULL PREVIEW */
+.preview-card {
+  width: 100%;
+  height: 100%;
+  min-height: 650px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* iframe */
+.preview-card iframe {
   width: 100%;
   height: 100%;
   border: none;
-  border-radius: 10px;
   background: white;
+}
+
+/* TABLET MODE */
+.body-tab {
+  width: 500px;
+  height: 600px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+}
+
+/* MOBILE MODE */
+.body-mob {
+  width: 390px;
+  height: 844px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #d1d5db;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .preview-head {
+    padding: 0 16px;
+  }
+
+  .preview-body {
+    padding: 16px;
+  }
 }
 
 @media (max-width: 700px) {
   .preview-head {
     flex-direction: column;
     height: auto;
-    gap: 14px;
+    gap: 12px;
     padding: 16px;
   }
 
@@ -76,4 +132,32 @@
     width: 100%;
     justify-content: center;
   }
+
+  .preview-actions button {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.preview-body {
+  width: 100%;
+  height: 100%;
+}
+
+.body-tab {
+  width: 468px;
+  height: 90%;
+  margin: 0 auto;
+}
+
+.body-mob {
+  width: 330px;
+  height: 90%;
+  margin: 0 auto;
+}
+
+.preview-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
 }

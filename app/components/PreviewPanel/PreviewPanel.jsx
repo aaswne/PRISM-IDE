@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import "./PreviewPanel.css";
 import {
   FiMonitor,
@@ -8,17 +10,11 @@ import {
 } from "react-icons/fi";
 
 export default function PreviewPanel({ page = [] }) {
-  const htmlFile = page.find((file) =>
-    file.name.endsWith(".html")
-  );
+  const htmlFile = page.find((file) => file.name.endsWith(".html"));
+  const cssFile = page.find((file) => file.name.endsWith(".css"));
+  const jsFile = page.find((file) => file.name.endsWith(".js"));
 
-  const cssFile = page.find((file) =>
-    file.name.endsWith(".css")
-  );
-
-  const jsFile = page.find((file) =>
-    file.name.endsWith(".js")
-  );
+  const [view, setView] = useState("desktop");
 
   const previewCode = `
     <!DOCTYPE html>
@@ -39,6 +35,17 @@ export default function PreviewPanel({ page = [] }) {
     </html>
   `;
 
+  const getPreviewClass = () => {
+    switch (view) {
+      case "tablet":
+        return "body-tab";
+      case "mobile":
+        return "body-mob";
+      default:
+        return "preview-body";
+    }
+  };
+
   return (
     <section className="preview-panel">
       <div className="preview-head">
@@ -48,15 +55,24 @@ export default function PreviewPanel({ page = [] }) {
         </div>
 
         <div className="preview-actions">
-          <button className="active">
+          <button
+            onClick={() => setView("desktop")}
+            className={view === "desktop" ? "active" : ""}
+          >
             <FiMonitor />
           </button>
 
-          <button>
+          <button
+            onClick={() => setView("tablet")}
+            className={view === "tablet" ? "active" : ""}
+          >
             <FiTablet />
           </button>
 
-          <button>
+          <button
+            onClick={() => setView("mobile")}
+            className={view === "mobile" ? "active" : ""}
+          >
             <FiSmartphone />
           </button>
 
@@ -70,12 +86,14 @@ export default function PreviewPanel({ page = [] }) {
         </div>
       </div>
 
-      <div className="preview-body">
-        <iframe
-          title="Live Preview"
-          srcDoc={previewCode}
-          className="preview-frame"
-        />
+      <div className="preview-card">
+        <div className={getPreviewClass()}>
+          <iframe
+            title="Live Preview"
+            srcDoc={previewCode}
+            className="preview-frame"
+          />
+        </div>
       </div>
     </section>
   );
