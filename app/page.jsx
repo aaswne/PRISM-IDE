@@ -54,7 +54,7 @@ export default function Home() {
       id: 2,
       name: "style.css",
       language: "css",
-      code: "body { background: #111; }",
+      code: "body { background: white; }",
     },
     {
       id: 3,

@@ -75,6 +75,7 @@ export default function SideBar({
 
         <p className="side-title">TOOLS</p>
 
+        <div className="div">
         <div onClick={handlePreview} className={showPreview?"side-item active":"side-item"}>
           <FiPlay />
           Live Preview
@@ -102,6 +103,9 @@ export default function SideBar({
           Keyboard Shortcuts
         </div>
       </div>
+
+      </div>
+
 
       <div>
         <div className="pro-card">

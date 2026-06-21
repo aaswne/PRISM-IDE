@@ -21,10 +21,7 @@ export default function Header() {
       </div>
 
       <div className="header-right">
-        <button className="theme-btn">
-          <FiMoon />
-          <FiSun />
-        </button>
+       
 
         <button className="share-btn">Share</button>
 

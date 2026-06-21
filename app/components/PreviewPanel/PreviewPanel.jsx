@@ -86,15 +86,23 @@ export default function PreviewPanel({ page = [] }) {
         </div>
       </div>
 
-      <div className="preview-card">
-        <div className={getPreviewClass()}>
-          <iframe
-            title="Live Preview"
-            srcDoc={previewCode}
-            className="preview-frame"
-          />
-        </div>
-      </div>
+     <div className="preview-card">
+  <div className={getPreviewClass()}>
+    
+    {/* Mobile Notch */}
+    <div className="device-notch"></div>
+
+    <iframe
+      title="Live Preview"
+      srcDoc={previewCode}
+      className="preview-frame"
+    />
+
+    {/* Bottom Home Button */}
+    <div className="device-home-btn"></div>
+
+  </div>
+</div>
     </section>
   );
 }
