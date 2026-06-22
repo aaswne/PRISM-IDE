@@ -31,6 +31,10 @@ export default function SideBar({
     setActive(id);
   };
 
+  const handleUpgrade = () =>{
+    
+  }
+
   return (
     <aside className="sidebar">
       <div>
@@ -111,7 +115,7 @@ export default function SideBar({
         <div className="pro-card">
           <h4>⚡ Unlock Pro</h4>
           <p>Get more features and cloud sync</p>
-          <button>Upgrade Now</button>
+          <button onClick={handleUpgrade}>Upgrade Now</button>
         </div>
 
         <div className="socials">
