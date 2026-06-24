@@ -1,94 +1,75 @@
-# PRISM IDE
 
-A modern browser-based code editor inspired by VS Code, built with Next.js, React, and Monaco Editor.
+PRISM IDE
 
-![Status](https://img.shields.io/badge/status-active%20development-orange)
+A code editor I’m building to make coding in the browser feel simple and fast.
 
-## 🚀 Overview
+Inspired by VS Code, Prism is built with Next.js, React, and Monaco Editor. The goal is to create a clean workspace where you can write, preview, and manage projects without leaving the browser.
 
-Prism IDE is a lightweight online code editor designed to provide a fast and intuitive coding experience directly in the browser. It features a modern interface, multi-file editing, and real-time preview capabilities.
+Current Features
 
-## ✨ Current Features
+* Monaco Editor
+* Multiple file support
+* HTML, CSS & JavaScript editing
+* Live Preview
+* File Explorer
+* File Tabs
+* Create & Delete Files
+* Responsive UI
+* Dark Theme
 
-- Monaco Editor integration
-- Multi-file support
-- HTML, CSS, and JavaScript editing
-- Live Preview
-- File Explorer
-- File Tabs
-- Add & Delete Files
-- Responsive Layout
-- Modern VS Code-inspired UI
-- Dark Theme
+Tech Stack
 
-## 🛠️ Built With
+* Next.js
+* React
+* Monaco Editor
+* React Icons
+* CSS
 
-- Next.js
-- React
-- Monaco Editor
-- React Icons
-- CSS
+Progress
 
-## 📸 Current Progress
+✅ Editor
 
-- ✅ Editor Panel
-- ✅ Explorer Sidebar
-- ✅ File Management
-- ✅ Live Preview
-- ✅ Responsive UI
-- 🚧 Console Panel
-- 🚧 Terminal
-- 🚧 Download Project
-- 🚧 Theme System
-- 🚧 React Support
-- 🚧 Cloud Sync
+✅ File Explorer
 
-## 🏃 Getting Started
+✅ File Management
 
-```bash
+✅ Live Preview
+
+✅ Responsive Design
+
+🚧 Console
+
+🚧 Terminal
+
+🚧 Project Download
+
+🚧 Theme System
+
+🚧 React Support
+
+🚧 Cloud Sync
+
+Getting Started
+
 npm install
 npm run dev
-```
 
-Open:
+Open the app, start coding, and click Preview to see your changes instantly.
 
-```bash
-just click the preview button to previw your work
-```
+What’s Next?
 
-## 📖 How to Use
+* Terminal support
+* Project export
+* Code formatting
+* Multiple themes
+* React & TypeScript support
+* AI assistance
+* Cloud sync
 
-Prism comes with three default files:
+Note
 
-- `index.html`
-- `style.css`
-- `script.js`
+This project is actively being built and improved as I learn and experiment with new ideas.
 
-Simply edit these files and click the **Preview** button to see your work instantly.
+If you like the project, feel free to star the repository and follow the journey.
 
-Currently, Prism IDE supports HTML, CSS, and JavaScript projects. Support for frameworks, libraries, and additional programming languages is planned for future releases.
-
-## 🎯 Roadmap
-
-- Console Integration
-- Terminal Support
-- Project Export
-- Code Formatting
-- Multiple Themes
-- React & TypeScript Support
-- AI Code Assistant
-- Cloud Storage & Sync
-
-## 📌 Status
-
-Prism IDE is currently under active development. New features, improvements, and optimizations are being added regularly.
-
-## 👨‍💻 Author
-
-**Aswin Krishna**
-
-Frontend Developer | React | Next.js
-
----
-
-⭐ Star the repository to follow the development journey.
+— Aswin Krishna
