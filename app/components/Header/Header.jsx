@@ -1,7 +1,7 @@
 import "./Header.css";
 import { FiCode, FiChevronDown, FiDownload, FiSun, FiMoon } from "react-icons/fi";
 
-export default function Header() {
+export default function Header({handleDownlode}) {
   return (
     <header className="header">
       <div className="header-left">
@@ -10,7 +10,7 @@ export default function Header() {
       </div>
 
       <div className="header-center">
-        <button className="project-btn">
+        <button className="">
           My Project <FiChevronDown />
         </button>
 
@@ -25,7 +25,7 @@ export default function Header() {
 
         <button className="share-btn">Share</button>
 
-        <button className="download-btn">
+        <button  onClick={handleDownlode} className="download-btn">
           <FiDownload />
           Download
         </button>

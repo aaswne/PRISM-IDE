@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-
+import JSZip from "jszip";
+import { saveAs } from "file-saver";
 import Header from "@/app/components/Header/Header";
 import SideBar from "@/app/components/SideBar/SideBar";
 import EditorPanel from "@/app/components/EditorPanel/EditorPanel";
@@ -64,10 +65,22 @@ export default function Home() {
     },
   ]);
 
+  const handleDownlode = async () => {
+    const zip = new JSZip();
+
+    page.forEach((file) => {
+      zip.file(file.name, file.code);
+    });
+
+    const content = await zip.generateAsync({ type: "blob" });
+
+    saveAs(content, "my-project.zip");
+  }
+
   const [activeFile, setActiveFile] = useState(1);
   return (
     <main className="app-shell">
-      <Header />
+      <Header handleDownlode={handleDownlode} />
 
       <section className="main-layout">
         <SideBar
